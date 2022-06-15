@@ -1,0 +1,31 @@
+<!-- <p>customer-portal works!</p> -->
+<div class="card" *ngIf="customer.numberOfOrders == 0 && coupons.length == 0">
+    <div class="card-body">
+        <h4>Coupon for New Users</h4>
+        <h5>save Rs100.00 on your first order. Valid in 10 days after clicking the confirm button below</h5>
+        <button type="button" class="btn btn-primary" [disabled]="clicked" (click)="saveCoupon()">confirm</button>
+        <div class="alert alert-info alert-dismissible " role="alert" *ngIf="couponSaved">
+            <strong>Congratulations! Your coupon is saved!</strong>
+        </div>
+    </div>
+</div>
+
+<div class="card-1">
+    <div class="card-title">
+        <h1>Hi,{{customer.firstName}} {{customer.lastName}}, We are Happy to See You "Keep Shopping".</h1>
+    </div>
+    <div class="card-subtitle">
+        <p>Your current balance: {{customer.balance}}</p>
+    </div>
+    <div class="card-body">
+        <p>Select an option below: </p>
+        <div class="btn-group-vertical">
+            <a routerLink="/customer/{{custId}}/details"><button>Personal Information</button></a><br>
+            <a routerLink="/customer/{{custId}}/transaction"><button>View Transaction</button></a><br>
+            <a routerLink="/customer/{{custId}}/addmoney"><button>Add Money</button></a><br>
+            <a routerLink="/customer/{{custId}}/placeorder"><button>Place Order</button></a><br>
+            <a routerLink="/"><button>Log out</button></a><br>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,95 @@
+<div class="card">
+    <div class="card-body">    
+        <h4><b>Register Form</b></h4>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+
+        <div class="alert alert-info alert-dismissible " role="alert" *ngIf="formSubmitted">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <strong>You registered successfully! </strong><a routerLink="/login">Back to Login page</a>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <form [formGroup]="registerForm" validate >
+                    <div class="form-group">
+                        <label><b>First Name</b></label>
+                        <input type="text" class="form-control" firstName="firstName" formControlName="firstName" placeholder="Enter your First Name"
+                        [ngClass]="{'is-invalid':firstName.errors && (firstName.touched || firstName.dirty), 'is-valid': firstName.valid}" />
+                        <div class="invalid-feedback">
+                            <strong>First name is required.</strong>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><b>Last Name</b></label>
+                        <input type="text" class="form-control" formControlName="lastName" placeholder="Enter your Last Name"
+                        [ngClass]="{'is-invalid':lastName.errors && (lastName.touched || lastName.dirty), 'is-valid': lastName.valid}" />
+                        <div class="invalid-feedback">
+                            <strong>Last name is required.</strong>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><b>Email</b></label>
+                        <input type="email" class="form-control" formControlName="email" placeholder="Enter your email"
+                        [ngClass]="{'is-invalid':email.errors && (email.touched || email.dirty), 'is-valid': email.valid}" />
+                        <div class="invalid-feedback">
+                            <strong>Email is required.</strong>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><b>Username</b></label>
+                        <input type="text" class="form-control" formControlName="username" placeholder="Enter your User Name"
+                        [ngClass]="{'is-invalid':username.errors && (username.touched || username.dirty), 'is-valid': username.valid}" />
+                        <div class="invalid-feedback">
+                            <strong>Username is required.</strong>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><b>Password</b></label>
+                        <input type="text" class="form-control" formControlName="password" placeholder="Enter your Password"
+                        [ngClass]="{'is-invalid': password.errors && (password.touched || password.dirty), 'is-valid': password.valid}" />
+                        <div class="invalid-feedback">
+                            <strong *ngIf="password.errors?.required">Enter Valid Password</strong>
+                            <strong *ngIf="password.errors?.minlength">* Password must contain atleast 1 Uppercase character<br/>*Password must contain atleast 1 Lowercase character<br/> Password must contain atleast 1 number character</strong>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><b>Role</b></label>
+                        <select class="form-control" formControlName="role" >
+                            <option *ngFor="let r of roles">{{r}}</option>
+                        </select>
+                    </div>
+                    <div class="form-row py-1">
+                        <button type="submit"[disabled]="!registerForm.valid" class="btn-outline-success" (click)="onSubmit()"><h6 style="color:aliceblue;">Create an Account</h6></button><br/>
+                   
+                    <button class="btn btn" (click)="registerForm.reset()"><h6 style="color:aliceblue;">Reset</h6></button>
+                    <a routerLink="" class="btn btn-link"><button><h6 style="color:aliceblue;">Cancel</h6></button> </a>
+                </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

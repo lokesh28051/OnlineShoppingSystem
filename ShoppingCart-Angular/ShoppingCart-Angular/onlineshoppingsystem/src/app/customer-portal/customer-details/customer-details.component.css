@@ -1,0 +1,11 @@
+.card{
+  background-color: gold;
+}
+.card-body{
+  background-color: antiquewhite;
+}
+
+td{
+    color: black;
+    font-size: large;
+}

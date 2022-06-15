@@ -1,0 +1,17 @@
+.bb{
+  background-color:rgb(26, 232, 232)
+}
+.card{
+    background-color: rgb(234, 234, 75);
+}
+.card-body{
+  background-color:rgb(234, 234, 75);
+}
+
+td{
+    color: black;
+    font-size: large;
+}
+.col-md-6{
+  margin-top: 5%;
+}

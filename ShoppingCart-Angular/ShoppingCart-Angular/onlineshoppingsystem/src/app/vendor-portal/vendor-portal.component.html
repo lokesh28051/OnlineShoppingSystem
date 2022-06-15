@@ -1,0 +1,18 @@
+
+<div class="card">
+    <div class="card-title">
+        <h1>Hii, {{vendor.firstName}} {{vendor.lastName}}, Keep Selling Products And Make Your Customer HAPPY</h1> 
+    </div>
+    <div class="card-subtitle"> <br>
+        <p>Select an option below &#8594;</p>
+    </div>
+    <div class="card-body">
+        <div class="btn-group-vertical">
+            <a routerLink="/vendor/{{vendorId}}/details"> <button> Personal Information</button> </a> <br>
+            <a routerLink="/vendor/{{vendorId}}/transaction"><button>View and Update Transaction Status</button></a> <br>
+            <a routerLink="/vendor/{{vendorId}}/updatemenu"><button>Update Product</button></a> <br>
+            <a routerLink="/vendor/{{vendorId}}/customer-list"><button>View Customer List</button></a> <br>
+            <a routerLink="/"><button>Log out</button></a>
+        </div>
+    </div>
+</div>

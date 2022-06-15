@@ -1,0 +1,51 @@
+
+.card{
+    background-image: url(/assets/b17.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label,h4{
+    color: black;
+}
+
+.col-md-6{
+    margin-left: 4%;
+}
+
+.card-body{
+    align-content: center;
+}
+
+h4{
+    text-align:center;
+}
+
+form-group{
+    background-color: red;
+}
+
+button{
+    background-color: blue;
+}
+
+Button:hover {
+    background: #ddd;
+    color:blue;
+    padding: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button{
+      font-size: 15px;
+  }
+  h6{
+      font-size: 20px;
+  }
+
+  .form-group{
+    border-radius: 10px;
+  } 
+

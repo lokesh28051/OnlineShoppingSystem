@@ -1,0 +1,76 @@
+.card{
+    background-image: url(/assets/b3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+    color: black;
+}
+.card-body{
+  margin-top: 4%;
+}
+
+.card-subtitle{
+  margin-top: 2%;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  button:hover{
+    background: #ddd;
+    color: black;
+  }
+  button:hover span {
+    padding-right: 25px;
+  }
+
+
+h1{
+  
+  text-transform: uppercase;
+ background-image: linear-gradient(
+   -225deg,
+   #231557 0%,
+   #44107a 29%,
+   #ff1361 67%,
+   #0051ff 100%
+ );
+ background-size: auto auto;
+ background-clip: border-box;
+ background-size: 50% auto;
+ color: #fff;
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ animation: textclip 2s linear infinite;
+ display: inline-block;
+     font-size: 30px;
+
+
+@keyframes textclip {
+ to {
+   background-position: 200% center;
+ }
+}
+
+}
+
+p{
+    text-transform: uppercase;
+    color: navy;
+    font-weight: bold;
+    font-stretch: expanded;
+
+
+}

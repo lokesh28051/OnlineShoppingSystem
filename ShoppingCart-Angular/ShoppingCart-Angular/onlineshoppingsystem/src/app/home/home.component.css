@@ -1,0 +1,88 @@
+
+
+.bgg{
+  background-color:orangered;
+  
+}
+
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: orange;
+  background-image: url(/assets/b17.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 280px;
+  
+}
+ .content h1{
+  color:rgb(80, 9, 53);
+} 
+
+
+
+
+
+
+
+ h1{
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 300px;
+  }
+  100% {
+    margin-left: 0%;
+  }
+} 
+
+h1{
+  
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+0% {
+  margin-left: 0%;
+}
+50% {
+  margin-left: 300px;
+}
+100% {
+  margin-left: 0%;
+
+
+  text-transform: uppercase;
+ 
+
+
+@keyframes textclip {
+ to {
+   background-position: 200% center;
+ }
+}
+}
+}
+
+p{
+  /* font-size: 18px; */
+  margin: auto;
+  color: white;
+  font: 700 normal 1.4em 'tahoma';
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+
+}

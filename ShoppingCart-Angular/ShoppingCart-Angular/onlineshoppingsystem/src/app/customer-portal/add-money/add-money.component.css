@@ -1,0 +1,12 @@
+
+.card{
+    background-color: antiquewhite;
+}
+.card-body{
+  background-color:rgb(127, 255, 136);
+}
+
+td{
+    color: black;
+    font-size: large;
+}
